@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto&display=swap');
+/*Imports:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Righteous', cursive;
+*/
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.toa-button {
+    padding: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: ease 0.6s;
+}
+
+.toa-button:hover {
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.toa-input {
+    padding: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-radius: 4px;
+
+    transition: ease 0.5s;
+}
+
+.toa-input:hover {
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.toa-input:focus {
+    border-radius: 0px;
+}
+
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+
+#main-title-container {
+    position: fixed;
+    width: 100%;
+
+    text-align: center;
+
+    border-bottom-width: 2px;
+    border-right-width: 0px; border-left-width: 0px; border-top-width: 0px;
+    border-style: solid;
+
+    transition: ease 0.8s;
+}
+
+#main-title-text {
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+
+    padding-top: 24px;
+    padding-bottom: 10px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+    transition: ease 0.8s;
+}
+
+#main-title-container:hover {
+    border-top-width: 1px;
+    border-bottom-width: 2px;
+}
+
+#main-title-text:hover {
+    font-size: 46px;
+    padding-top: 40px;
+    padding-bottom: 22px;
+}
+
+
+
+.account-box {
+    position: absolute;
+    width: 20%;
+    text-align: right;
+    
+    left: 0%;
+
+    padding: 8px;
+
+    border-right-width: 1px;
+    border-bottom-width: 3px;
+    border-left-width: 0px; border-top-width: 0px;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-style: solid;
+
+    transition: ease 0.4s;
+}
+
+.account-box:hover {
+    padding-top: 14px;
+    border-bottom-right-radius: 2px;
+}
+
+#login-info {
+    font-size: 18px;
+
+    padding-top: 6px;
+    padding-bottom: 14px;
+    text-align: center;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.login-input-display {
+    font-size: 14px;
+    padding-right: 6px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.ab-input-container {
+    text-align: right;
+    margin-right: 9%;
+}
+
+#username-input-container {
+    margin-bottom: 4px;
+}
+
+#password-input-container {
+    margin-bottom: 10px;
+}
+
+#create-account-button {
+    margin-right: 10%;
+}
+
+#login-button {
+    margin-right: 6%;
+}
+
+
+#logged-in-account-box {
+    text-align: left;
+}
+
+
+#ab-username-display-container {
+    display: inline-block;
+    width: 70%;
+    margin-top: 5px;
+
+    font-size: 22px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+#logout-button {
+    width: 30%;
+}
+
+
+#main-content-container {
+    position: fixed;
+    left: 2%;
+    top: 15%;
+
+    width: 96%;
+    height: 83%;
+
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+#main-content {
+    height: 100%;
+}
+
+
+
+
+
+
+#creator-sprite-display {
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 2px;
+    padding-bottom: 8px;
+
+    position: absolute;
+    left: 11%;
+    top: 30%;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+#creator-sprite-display:hover {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+#creator-title {
+    font-size: 26px;
+
+    text-align: center;
+    position: fixed;
+    
+    width: 20%;
+    left: 40%;
+    top: 16%;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+#sprite-button-container {
+    position: fixed;
+    left: 29%;
+    top: 45%;
+
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+
+    width: 20%;
+
+    text-align: center;
+
+    border: 1px solid;
+}
+
+.sprite-button-group {
+    padding: 8px;
+}
+
+.sprite-button {
+    position: relative;
+    padding-top: 10px;
+    width: 10%;
+
+    border-radius: 0px;
+}
+
+.sprite-button-left {
+    right: 10%;
+
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.sprite-button-right {
+    left: 10%;
+    
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.background-container {
+    position: absolute;
+    left: 53%;
+    top: 13%;
+    width: 42%;
+
+    padding: 6px;
+
+    border: 1px solid;
+}
+
+.bg-titles {
+    font-family: 'Righteous', sans-serif;
+    font-size: 20px;
+    padding-bottom: 3px;
+}
+
+.background-option-title {
+    font-family: 'Righteous', sans-serif;
+}
+
+#combat-background-container {
+    top: 48%;
+}
+
+.background-option-description {
+    font-size: 14px;
+
+    width: 85%;
+
+    padding: 2px;
+
+    margin-left: 1%;
+    margin-top: 0.3%;
+    margin-bottom: 1.4%;
+}
+
+.background-option-description:hover {
+    font-size: 16px;
+
+    width: 95%;
+
+    padding: 2px;
+}
+
+.background-option-select {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
