@@ -2,9 +2,11 @@ import { attachChildren } from "../ElementBuilder.js";
 import { accountInterface } from "../../main.js";
 
 import { Creator } from "./Pages/Creator.js";
+import { GameHome } from "./Pages/GameHome.js";
 
 
 export const CONTENT_CREATOR = 'creator';
+export const CONTENT_GAME_HOME = 'game-home';
 
 
 export const MAIN_CONTENT_ID = 'main-content';
@@ -30,7 +32,7 @@ function getCurrentContent() {
                 break;
             
             default:
-                //Home
+                return GameHome(account);
         }
     }
     else {

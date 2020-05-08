@@ -1,7 +1,9 @@
 import { TOAButton } from "../../TOA/TOA-Button.js";
 import * as Human from "../../Sprites/Human.js";
-import { MAIN_CONTENT_ID } from "../MainContent.js";
+import { MAIN_CONTENT_ID, CONTENT_GAME_HOME } from "../MainContent.js";
 import { attachChildren } from "../../ElementBuilder.js";
+import { accountInterface } from "../../../main.js";
+import { page } from "../../../main.js";
 
 
 
@@ -20,7 +22,8 @@ export function Creator(account) {
         SpriteDisplay(account),
         SpriteButtonContainer(account),
         PrimaryBackgroundContainer(account),
-        CombatBackgroundContainer(account)
+        CombatBackgroundContainer(account),
+        DoneButton(account)
     ];
 }
 
@@ -268,4 +271,28 @@ function BackgroundOptionSelect(bgType, backgroundName, account) {
     document.getElementById( BUTTON_SECRET_ID(backgroundName) ).classList.add( searchClass, BG_SELECTED_CLASS );
 }
 
-//Make sure they selected both backgrounds, maybe give them 'are you completed' prompt
+
+
+export const DONE_BUTTON_ID = 'cc-done-button';
+
+function DoneButton(account) {
+    var doneButton = TOAButton( function(){ return done(account) } );
+    doneButton.id = DONE_BUTTON_ID;
+    doneButton.innerText = 'Finish';
+
+    return doneButton;
+}
+
+function done(account) {
+    var didPrimary = document.getElementsByClassName(BG_PRIMARY_SELECTED_CLASS);
+    var didCombat = document.getElementsByClassName(BG_COMBAT_SELECTED_CLASS);
+
+    if (didPrimary[0] == undefined || didCombat[0] == undefined) {
+        alert('Select both a primary and combat background');
+    }
+    else {
+        account.contentPage = CONTENT_GAME_HOME;
+        accountInterface.storeCurrentAccount(account);
+        page.resetPage();
+    }
+}
