@@ -1,5 +1,9 @@
 import * as Content from "../PageElements/MainContent/MainContent.js";
 import * as Human from "../PageElements/Sprites/Human.js";
+import * as c from "../Creature/Creature.js";
+import * as r from "../Creature/Race.js";
+import * as a from "../Creature/Attributes.js";
+import * as s from "../Creature/Skills.js";
 
 
 export class Account {
@@ -18,6 +22,11 @@ export class Account {
 
         this.primaryBackground = null;
         this.combatBackground = null;
+
+        this.character = new c.Creature(this.usernameCase,
+            1, new r.Race('Human'),
+            new a.Attributes(), new s.Skills()
+            );
     }
 
     CharacterSprite(width, height, x, y) {

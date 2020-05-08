@@ -1,12 +1,14 @@
 import { attachChildren } from "../ElementBuilder.js";
-import { accountInterface } from "../../main.js";
+import { accountInterface, page } from "../../main.js";
 
 import { Creator } from "./Pages/Creator.js";
-import { GameHome } from "./Pages/GameHome.js";
+import { GameHome } from "./Pages/GameHome/GameHome.js";
+import { Combat } from "./Pages/Combat/Combat.js";
 
 
 export const CONTENT_CREATOR = 'creator';
 export const CONTENT_GAME_HOME = 'game-home';
+export const CONTENT_COMBAT = 'combat';
 
 
 export const MAIN_CONTENT_ID = 'main-content';
@@ -30,6 +32,10 @@ function getCurrentContent() {
             case CONTENT_CREATOR:
                 return Creator(account);
                 break;
+
+            case CONTENT_COMBAT:
+                return Combat(account);
+                break;
             
             default:
                 return GameHome(account);
@@ -40,3 +46,8 @@ function getCurrentContent() {
     }
 }
 
+export function changePage(newContent, account) {
+    account.contentPage = newContent;
+    accountInterface.storeCurrentAccount(account);
+    page.resetPage();
+}
