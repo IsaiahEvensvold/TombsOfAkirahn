@@ -3,8 +3,9 @@
 
 export class Fight {
 
-    constructor() {
-        
+    constructor(party1, party2) {
+        //Calculate turn order
+        //Do turns
     }
 
 }

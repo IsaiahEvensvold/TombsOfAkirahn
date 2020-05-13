@@ -3,6 +3,7 @@ import { storage, page } from "../../main.js";
 
 import { getAccountDataKey } from "./LocalAccount.js";
 import { Account } from "../../Account/Account.js";
+import { Creature } from "../../Creature/Creature.js";
 
 
 
@@ -24,7 +25,9 @@ export class LocalAccountInterface extends AccountInterface {
     }
 
     getCurrentAccount() {
-        return storage.getObject( storage.key.CURRENT_ACCOUNT, Account);
+        var acct = storage.getObject( storage.key.CURRENT_ACCOUNT, Account);
+
+        return acct;
     }
 
     getCurrentAccountData() {

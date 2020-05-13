@@ -4,6 +4,7 @@ import * as c from "../Creature/Creature.js";
 import * as r from "../Creature/Race.js";
 import * as a from "../Creature/Attributes.js";
 import * as s from "../Creature/Skills.js";
+import * as p from "../Fight/Party.js";
 
 
 export class Account {
@@ -27,6 +28,8 @@ export class Account {
             1, new r.Race('Human'),
             new a.Attributes(), new s.Skills()
             );
+
+        this.party = new p.Party( [ this.character ] );
     }
 
     CharacterSprite(width, height, x, y) {
